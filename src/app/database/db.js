@@ -5,6 +5,22 @@ const users = [
     {id: 3, name: "Will_03", password: '3030'}
 ] 
 
-export const getUserByName = (name) => {
+const getUsers = () => { 
+    return users
+}
+
+const searchUserId = (id) => {
+    return users.find(user => user.id == id)
+}
+
+const searchUserIndex = (id) => {
+    return users.findIndex(user => user.id == id)
+}
+
+const getUserByName = (name) => {
     return users.find(user => user.name === name)
 }
+
+
+export {getUsers, searchUserId,searchUserIndex, getUserByName}
+
