@@ -3,6 +3,10 @@ import UserRepository from '../repositories/UserRepository.js';
 
 class UserController {
 
+    hello (req, res) {
+        res.status(200).json({msn: "Oi! Tudo bom? Uma mensagem do json msn"}).send('Olá, o servidor está rodando com express e HTTP 2!!')
+    }
+
     index (req, res) {
         const users = UserRepository.findAll();
         res.status(200).send(users);

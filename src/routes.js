@@ -5,6 +5,7 @@ import UserController from "./app/controllers/UserController.js"
 const router = Router();
 
 //Consultando Users/user (Read)
+router.get("/", UserController.hello)
 router.get("/user", UserController.index)
 router.get("/user/:id", UserController.show)
 
